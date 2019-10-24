@@ -1,9 +1,9 @@
 const autoras = $('.autoras');
-const header = $('.autora .header');
 
 autoras.on('click', '.header', function () {
-    $(this).siblings().slideToggle().parent().toggleClass('active');
-    $(this).parent().siblings().find('.body').slideUp().parent().removeClass('active');
+    $(this).siblings().slideToggle().parent().toggleClass('active').find('.hide').css('transform', 'rotate(90deg)');
+    $(this).parent().siblings().find('.body').slideUp().parent().removeClass('active').find('.hide').css('transform', 'rotate(0deg)');
+
     // $(this).parent().removeClass('active');
     // $(this).parent().css('background', '#fff');
     // $(this).parent().addClass('active');
