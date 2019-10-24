@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.autoras {
+    display: grid;
+    justify-content: flex-end;
+    grid-template-columns: repeat(4, 20%);
+    grid-gap: 20px;
+    background: radial-gradient(ellipse at center, rgba(163, 26, 21, 1) 0%, rgba(22, 8, 18, 1) 63%, rgba(22, 8, 18, 1) 100%);
+    padding: 25px;
+    flex-wrap: wrap;
+}
+
+.autora {
+    text-align: center;
+    background: #160812;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    height: 550px;
+    padding: 15px;
+    transition: .8s;
+    -webkit-transition: .8s;
+    -moz-transition: .8s;
+    -ms-transition: .8s;
+    -o-transition: .8s;
+}
+
+.autora.active {
+    background: #f5f5f5;
+}
+
+.autora img.biografia {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+    margin-bottom: 1rem;
+    width: 100px;
+}
+
+
+.autora h3 {
+    color: #e63e11;
+    margin-bottom: 1rem;
+}
+
+.autora p {
+    color: #9b9b9b;
+    margin-bottom: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: .9rem;
+}
+
+.autora img.hide {
+    display: none;
+}
+
+/* .autora p:nth-of-type(3) {
+    margin-bottom: 1rem;
+} */
+
+@media(min-width:768px) {
+    .autora:hover {
+        background: #f5f5f5;
+    }
+
+    .autora:hover img.biografia {
+        filter: grayscale(0%);
+        -webkit-filter: grayscale(0%);
+        border: 4px solid #e63e11;
+    }
+}
+
+@media(max-width:1200px) {
+    .autoras {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width:992px) {
+    .autoras {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media (max-width:576px) {
+    .autoras {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+
+    .autora {
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .autora .header {
+        display: flex;
+        align-items: center;
+    }
+
+    .autora .header div {
+        /* margin-left: .7rem; */
+        /* text-align: center; */
+        width: 70%;
+    }
+
+    .autora .body {
+        display: none;
+        padding: 10px;
+    }
+
+    .autora img.biografia {
+        width: 70px;
+        margin-left: 5px;
+    }
+
+    .autora h3 {
+        font-size: 1.1rem;
+        /* text-align: left; */
+    }
+
+    .autora img.hide {
+        display: block;
+        width: 15px;
+    }
+}
